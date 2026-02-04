@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SCL Training Academy | Courses</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>SCL Training Academy</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Course.html">Course</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<hr>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Our Courses</h1>
+    <p>Choose the right course and build your career</p>
+</section>
+
+<hr>
+
+<!-- COURSES -->
+<section class="course-section">
+    
+
+    <!-- COURSE 1 -->
+    <div class="course-box">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript</p>
+        <button onclick="toggleDetails('c1')">View Details</button>
+
+        <div id="c1" class="course-details">
+            <p>✔ HTML5, CSS3</p>
+            <p>✔ Responsive Design</p>
+            <p>✔ JavaScript Basics</p>
+            <p>Duration: 3 Months</p>
+        </div>
+    </div>
+
+    <!-- COURSE 2 -->
+    <div class="course-box">
+        <h3>Python Programming</h3>
+        <p>Basic to Advanced Python</p>
+        <button onclick="toggleDetails('c2')">View Details</button>
+
+        <div id="c2" class="course-details">
+            <p>✔ Python Basics</p>
+            <p>✔ OOP Concepts</p>
+            <p>✔ File Handling</p>
+            <p>Duration: 2.5 Months</p>
+        </div>
+    </div>
+
+    <!-- COURSE 3 -->
+    <div class="course-box">
+        <h3>Full Stack Development</h3>
+        <p>Frontend + Backend</p>
+        <button onclick="toggleDetails('c3')">View Details</button>
+
+        <div id="c3" class="course-details">
+            <p>✔ HTML, CSS, JS</p>
+            <p>✔ Python / Node</p>
+            <p>✔ Database (MySQL)</p>
+            <p>Duration: 6 Months</p>
+        </div>
+    </div>
+
+    <!-- COURSE 4 -->
+    <div class="course-box">
+        <h3>Cyber Security</h3>
+        <p>Ethical Hacking Basics</p>
+        <button onclick="toggleDetails('c4')">View Details</button>
+
+        <div id="c4" class="course-details">
+            <p>✔ Networking Basics</p>
+            <p>✔ Kali Linux</p>
+            <p>✔ Ethical Hacking</p>
+            <p>Duration: 3 Months</p>
+        </div>
+    </div>
+
+    <!-- COURSE 5 -->
+    <div class="course-box">
+        <h3>Java Developer</h3>
+        <p>Core Java</p>
+        <button onclick="toggleDetails('c5')">View Details</button>
+
+        <div id="c5" class="course-details">
+            <p>✔ Object-Oriented Programming (OOP)</p>
+            <p>✔ Advanced Java</p>
+            <p>✔ Frameworks & Libraries</p>
+            <p>Duration: 6 Months</p>
+        </div>
+    </div>
+
+    <!-- COURSE 6 -->
+    <div class="course-box">
+        <h3>Data Analyst</h3>
+        <p>Programming Languages</p>
+        <button onclick="toggleDetails('c6')">View Details</button>
+
+        <div id="c6" class="course-details">
+            <p>✔ SQL</p>
+            <p>✔ AData Visualization</p>
+            <p>✔ Data Storytelling</p>
+            <p>Duration: 11 Months</p>
+        </div>
+    </div>
+
+
+</section>
+
+<hr>
+
+<!-- FOOTER -->
+<footer>
+    <p><strong>SCL Training Academy</strong></p>
+    <p>No.12 Thir.Vi.Ka.Street, Guindy, Chennai – 600040</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Email: scltrainingacademy@gmail.com</p>
+    <p>© 2026 SCL Training Academy. All Rights Reserved.</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function toggleDetails(id) {
+    const box = document.getElementById(id);
+    if (box.style.display === "block") {
+        box.style.display = "none";
+    } else {
+        box.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
