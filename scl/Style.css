@@ -202,3 +202,58 @@ footer {
     }
 }
 
+/* =====================
+   MOBILE SIDEBAR MENU
+===================== */
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Sidebar */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background: #1c2957;
+    padding: 20px;
+    transition: 0.3s ease;
+    z-index: 2000;
+}
+
+.mobile-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 0;
+    font-size: 18px;
+}
+
+.mobile-menu a:hover {
+    background: rgba(255,255,255,0.1);
+    padding-left: 10px;
+}
+
+/* Close button */
+.close-btn {
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* hide normal menu */
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
