@@ -1,11 +1,15 @@
-/* RESET */
+/* =====================
+   RESET
+===================== */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f4f4f4;
+    background: #f4f6f8;
 }
 
-/* NAVBAR */
+/* =====================
+   NAVBAR
+===================== */
 nav {
     background: #1c2957;
     color: white;
@@ -27,25 +31,27 @@ nav ul {
     padding: 0;
 }
 
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+/* =====================
+   HERO
+===================== */
+.hero {
+    background: #e9ecf1;
+    text-align: center;
+    padding: 60px 20px;
 }
 
-/* ABOUT SECTION */
+/* =====================
+   ABOUT
+===================== */
 .about-academy {
     background: white;
     padding: 40px 20px;
-}
-
-.about-academy h2 {
-    text-align: center;
-    margin-bottom: 30px;
 }
 
 .about-container {
@@ -59,7 +65,6 @@ nav ul li a:hover {
 
 .about-text {
     flex: 1;
-    font-size: 16px;
     line-height: 1.6;
 }
 
@@ -69,179 +74,17 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
-/* CLASSROOM GALLERY */
-.classroom-gallery {
-    padding: 40px 20px;
-    background: #f9f9f9;
-}
-
-.classroom-gallery h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.gallery {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.gallery img {
-    width: 300px;
-    border-radius: 10px;
-}
-
-/* WHY CHOOSE US */
-.why-choose-us {
-    text-align: center;
-    background: white;
-    padding: 40px 20px;
-}
-
-.why-choose-us h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.why-container {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.why-card {
-    background: #f4f4f4;
-    width: 250px;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.why-card img {
-    width: 70px;
-    margin-bottom: 10px;
-}
-
-.why-card h3 {
-    margin: 10px 0;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* CENTER ALL H2 HEADINGS */
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.course-card h3 {
-    text-align: center;
-}
-
-.course-card p {
-    text-align: justify;
-    line-height: 1.6;
-}
-
-/* Contact form medium box */
-.contact-form {
-    width: 450px;              /* medium size */
-    max-width: 90%;            /* responsive for mobile */
-    margin: 0 auto;            /* center the box */
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Inputs & textarea */
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-/* Button */
-.contact-form button {
-    background-color: #1c2957;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #2d3f8f;
-}
-
-footer {
-    border-top: 2px solid #1c2957;
-    box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
-}
-
-
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f4f4;
-}
-
-/* NAVBAR */
-nav {
-    background: #1c2957;
-    color: white;
-    padding: 15px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 40px;
-}
-
-/* COURSE SECTION */
+/* =====================
+   COURSES
+===================== */
 .course-section {
     max-width: 1100px;
     margin: 40px auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     padding: 20px;
 }
-
 
 .course-box {
     background: white;
@@ -250,7 +93,6 @@ nav ul li a {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     text-align: center;
 }
-
 
 .course-box button {
     margin-top: 10px;
@@ -263,135 +105,100 @@ nav ul li a {
 }
 
 .course-box button:hover {
-    background: #0f1b3d;
-}
-
-
-.course-box button:hover {
     background: #4facfe;
 }
 
-.course-details {
-    display: none;
-    margin-top: 15px;
-    text-align: left;
-    font-size: 14px;
-}
-
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #c7bcbc;
-    margin-top: 30px;
-}
-
-@media (max-width: 900px) {
-    .course-section {
-        grid-template-columns: repeat(2, 1fr); /* 2 per row */
-    }
-}
-
-@media (max-width: 600px) {
-    .course-section {
-        grid-template-columns: 1fr; /* 1 per row */
-    }
-}
-
-hr {
-    display: none;
-}
-
-
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f6f8;
-}
-
-/* Navbar */
-nav {
-    background: #1c2957;
-    color: white;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Hero */
-.hero {
-    background: #e9ecf1;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-/* Sections */
-section {
-    padding: 40px 20px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-/* Achievements */
-.achievement-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    text-align: center;
-}
-
-.achievement-box div {
+/* =====================
+   WHY CHOOSE US
+===================== */
+.why-choose-us {
     background: white;
-    padding: 25px;
-    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-/* Gallery */
+.why-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.why-card {
+    width: 250px;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* =====================
+   GALLERY
+===================== */
 .gallery-box {
-    display: flex;              /* GRID → FLEX */
+    display: flex;
     gap: 15px;
-    overflow-x: auto;           /* horizontal scroll */
-    padding-bottom: 10px;
+    overflow-x: auto;
 }
 
 .gallery-box img {
-    width: 220px;               /* fixed width */
-    height: 150px;              /* optional */
-    object-fit: cover;          /* image stretch avoid */
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
     border-radius: 8px;
-    flex-shrink: 0;             /* important */
+    flex-shrink: 0;
 }
 
-
-/* CTA */
-.cta {
-    background: #1c2957;
-    color: white;
-    text-align: center;
+/* =====================
+   CONTACT FORM
+===================== */
+.contact-form {
+    width: 450px;
+    max-width: 95%;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Footer */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+/* =====================
+   FOOTER
+===================== */
 footer {
-    background: #111111;
+    background: #111;
     color: #ccc;
     text-align: center;
     padding: 20px;
 }
- .content p {
-        text-align: center;
-        line-height: 1.7;
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+    .course-section {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .course-section {
+        grid-template-columns: 1fr;
+    }
+}
+
