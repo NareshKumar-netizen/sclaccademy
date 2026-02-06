@@ -6,20 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
+    
+
 </head>
+
+<script>
+function openMenu() {
+    document.getElementById("mobileMenu").style.left = "0";
+}
+
+function closeMenu() {
+    document.getElementById("mobileMenu").style.left = "-260px";
+}
+</script>
+
 
 <body>
 
     <!-- Navbar -->
     <nav>
-        <h2>SCL Training Academy</h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Course.html">Course</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <h2>SCL Training Academy</h2>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- Hamburger -->
+    <div class="menu-btn" onclick="openMenu()">☰</div>
+</nav>
+
+<!-- Mobile Sidebar -->
+<div id="mobileMenu" class="mobile-menu">
+    <span class="close-btn" onclick="closeMenu()">✖</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="course.html">Courses</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<!-- Overlay -->
+<div class="overlay" onclick="closeMenu()"></div>
+
 
     <hr>
 
@@ -55,5 +85,6 @@
     <p>© 2026 SCL Training Academy. All Rights Reserved.</p>
 </footer>
 
+<script src="js/menu.js"></script>
 </body>
 </html>
