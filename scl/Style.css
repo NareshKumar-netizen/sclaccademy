@@ -396,11 +396,11 @@ footer {
         line-height: 1.7;
     }  
 
-/* =====================  RESPONSIVE ===================== */
-@media (max-width: 900px) {
+
+    @media (max-width: 900px) {
     .course-section {
         grid-template-columns: repeat(2, 1fr);
-}
+    }
 }
 
 @media (max-width: 600px) {
@@ -409,19 +409,11 @@ footer {
         text-align: center;
     }
 
-    nav ul {
-        flex-direction: column;
-    }
-
     .course-section {
         grid-template-columns: 1fr;
     }
 }
 
-
-/* =====================
-   MOBILE SIDEBAR
-===================== */
 .menu-btn {
     display: none;
     font-size: 28px;
@@ -430,176 +422,34 @@ footer {
     color: white;
     cursor: pointer;
 }
-
-
-
-
-
-/* =====================
-   MOBILE VIEW FIX
-===================== */
-@media (max-width: 768px) {
-
-    /* NAVBAR */
-    nav {
-        display: flex;
-        justify-content: space-between; /* ✅ correct */
-        align-items: center;
-        padding: 15px 20px;
-    }
-
-    /* Hide normal menu */
-    nav ul {
-        display: none;
-    }
-
-    /* Show hamburger */
-    .menu-btn {
-        display: block;
-        font-size: 28px;
-        cursor: pointer;
-    }
-
-    /* HERO */
-    .hero {
-        text-align: center;
-        padding: 40px 15px;
-    }
-
-    /* ABOUT */
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    /* COURSES */
-    .course-section {
-        grid-template-columns: 1fr;
-    }
-
-    .course-box {
-        width: 90%;
-        margin: auto;
-    }
-
-    /* WHY CHOOSE US */
-    .why-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .why-card {
-        width: 90%;
-        text-align: center;
-        margin: auto;
-    }
-
-    /* GALLERY */
-    .gallery-box {
-        justify-content: center;
-    }
-
-    /* CONTACT */
-    .contact-form {
-        width: 90%;
-        margin: auto;
-    }
-
-    /* FOOTER */
-    footer {
-        text-align: center;
-    }
-}
-
-/* =====================
-   MOBILE SIDEBAR + OVERLAY
-===================== */
-
-/* Hamburger button */
-.menu-btn {
-    display: none;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-/* Sidebar */
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    left: -240px;          /* hidden state */
-    width: 70px;          /* 🔹 smaller size */
-    height: 20vh;
-    background: #1c2957;
-    padding: 10px;
-    transition: right 0.3s ease;
-    z-index: 1001;
-}
-
-.mobile-menu a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 10px 0;
-    font-size: 12px;
-}
-
-.mobile-menu a:hover {
-    background: #34468a;
-}
-
-/* Close button */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 18px;
-    color: white;
-    cursor: pointer;
-}
-
-/* Overlay (background) */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.35);
-    display: none;
-    z-index: 1000;
-}
-
-
-
 @media (max-width: 768px) {
 
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px 20px;
     }
 
     nav ul {
-        display: none;   /* hide desktop menu */
+        display: none;
     }
 
     .menu-btn {
-        display: block; /* show hamburger */
+        display: block;   /* ⭐ LEFT icon visible */
+    }
+
+    .hero {
+        text-align: center;
+        padding: 40px 15px;
     }
 
     .about-container,
     .why-container {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         text-align: center;
-    }
-
-    .course-section {
-        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .course-box,
@@ -608,4 +458,69 @@ footer {
         width: 90%;
         margin: auto;
     }
+
+    footer {
+        text-align: center;
+    }
 }
+
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;           /* fully hidden */
+    width: 70%;            /* ⭐ not too big */
+    max-width: 220px;      /* limit */
+    height: 100vh;
+    background: #1c2957;
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1001;
+}
+
+.mobile-menu.active {
+    left: 0;               /* slide from LEFT */
+}
+
+
+.mobile-menu a {
+    display: block;
+    color: white;
+    padding: 12px 0;
+    text-decoration: none;
+}
+
+.mobile-menu a:hover {
+    background: #34468a;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.25); /* ⭐ soft */
+    display: none;
+    z-index: 1000;
+}
+
+.overlay.active {
+    display: block;
+}
+
+
+body.menu-open {
+    overflow: hidden;
+}
+
